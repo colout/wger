@@ -20,6 +20,8 @@ RUN apt-get update \
       python3-dev \
       python3-pip \
       python3-wheel \
+      postgresql-client \
+      libpq-dev \
       git \
   && rm -rf /var/lib/apt/lists/*
 
