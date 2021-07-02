@@ -70,7 +70,8 @@ RUN chown -R wger:wger .
 RUN apt-get update \
   && apt-get install --no-install-recommends -y \
   libpq-dev \
-  libjpeg8-dev
+  libjpeg8-dev \
+  && rm -rf /var/lib/apt/lists/*
 
 USER wger
 RUN mkdir ~/media \
