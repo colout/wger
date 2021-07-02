@@ -67,13 +67,13 @@ RUN pip3 install --no-cache /wheels/* \
 
 RUN chown -R wger:wger .
 
+RUN apt-get update \
+  && apt-get install --no-install-recommends -y \
+  libpq-dev
+
 USER wger
 RUN mkdir ~/media \
     && mkdir ~/static \
     && mkdir ~/db/
-
-RUN apt-get update \
-  && apt-get install --no-install-recommends -y \
-  libpq-dev
 
 CMD ["/home/wger/entrypoint.sh"]
