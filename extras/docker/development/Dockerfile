@@ -69,9 +69,21 @@ RUN chown -R wger:wger .
 
 RUN apt-get update \
   && apt-get install --no-install-recommends -y \
-  libpq-dev \
-  libjpeg8-dev \
-  libopenjp2-7-dev \
+      postgresql-client \
+      libpq-dev \
+      libtiff5-dev \
+      libjpeg8-dev \
+      libopenjp2-7-dev \
+      zlib1g-dev \
+      libfreetype6-dev \
+      liblcms2-dev \
+      libwebp-dev \
+      tcl8.6-dev \
+      tk8.6-dev \
+      python3-tk \
+      libharfbuzz-dev \
+      libfribidi-dev \
+      libxcb1-dev \
   && rm -rf /var/lib/apt/lists/*
 
 USER wger
