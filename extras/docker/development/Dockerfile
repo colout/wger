@@ -48,7 +48,7 @@ RUN pip3 wheel --no-cache-dir --wheel-dir /wheels -r requirements_prod.txt
 ########
 # Final
 ########
-FROM ${docker_registry}wger/base:2.0-dev
+FROM ${docker_registry}wger/base:2.0-dev as final
 LABEL maintainer="Roland Geider <roland@geider.net>"
 ARG DOCKER_DIR=./extras/docker/development
 EXPOSE 8000
